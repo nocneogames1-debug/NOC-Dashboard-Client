@@ -286,7 +286,7 @@ const Home = () => {
             {/* Optional header */}
             {/* <HomeHeader /> */}
 
-            <BoardsActions />
+            <BoardsActions handleOpenCreate={handleOpenCreate}/>
 
             <Stack spacing={2} sx={{ mb: 2 }}>
                 {loading && <CircularProgress size={24} />}
