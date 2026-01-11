@@ -1,5 +1,6 @@
-export default (arr) => {
+const getMaxPriortyAlert = (arr = []) => {
     let max = "P4";
+
     function gpan(p) {
         switch (p) {
             case "P1":
@@ -11,15 +12,18 @@ export default (arr) => {
             case "P4":
                 return 4;
             default:
-                break;
+                return 4;
         }
     }
 
     for (let i = 0; i < arr.length; i++) {
-        const priority = gpan(arr[i].priority);
+        const priority = gpan(arr[i]?.priority);
         if (priority < gpan(max)) {
             max = arr[i].priority;
         }
     }
+
     return max;
-}
+};
+
+export default getMaxPriortyAlert;
