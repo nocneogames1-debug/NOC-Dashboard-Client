@@ -294,7 +294,7 @@ const Home = () => {
 
                 <Grid item>
                     <Stack direction="row" spacing={1}>
-                        <Button variant="contained" size="small" onClick={handleOpenCreate}>
+                        <Button variant="contained" style={{ backgroundColor: "orange" }} size="small" onClick={handleOpenCreate}>
                             + Add Board
                         </Button>
 
@@ -303,6 +303,7 @@ const Home = () => {
                             size="small"
                             onClick={handleOpenCreateTag}
                             disabled={tagsLoading && !tags}
+                            style={{ backgroundColor: "orange" }}
                         >
                             + Add Tag
                         </Button>
@@ -381,6 +382,7 @@ const Home = () => {
                                 aria-label="add environment"
                                 onClick={addEnvironment}
                                 disabled={!normalizeToken(envInput)}
+
                             >
                                 <AddIcon />
                             </IconButton>
@@ -433,8 +435,8 @@ const Home = () => {
                 </DialogContent>
 
                 <DialogActions>
-                    <Button onClick={handleCloseCreate}>Cancel</Button>
-                    <Button variant="contained" onClick={handleCreateBoard}>
+                    <Button onClick={handleCloseCreate} style={{ backgroundColor: "orange" }}>Cancel</Button>
+                    <Button variant="contained" onClick={handleCreateBoard} style={{ backgroundColor: "orange" }}>
                         Create
                     </Button>
                 </DialogActions>

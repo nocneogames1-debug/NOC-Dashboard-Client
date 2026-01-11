@@ -154,6 +154,7 @@ const Board = ({ board, loading, error }) => {
                     variant="contained"
                     size="small"
                     onClick={handleAddEnv}
+                    style={{ backgroundColor: "orange" }}
                 >
                     + Add Environment
                 </Button>
