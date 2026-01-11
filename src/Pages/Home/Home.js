@@ -35,6 +35,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import AddIcon from '@mui/icons-material/Add';
 
 import TagsContext from '../../Context/TagsContext';
+import BoardsActions from './Components/BoardActions';
 
 const normalizeToken = (s) => String(s || '').trim();
 
@@ -285,27 +286,7 @@ const Home = () => {
             {/* Optional header */}
             {/* <HomeHeader /> */}
 
-            <Grid container spacing={2} alignItems="center" justifyContent="space-between" sx={{ mb: 2 }}>
-
-
-                <Grid item>
-                    <Stack direction="row" spacing={1}>
-                        <Button variant="contained" style={{ backgroundColor: "orange" }} size="small" onClick={handleOpenCreate}>
-                            + Add Board
-                        </Button>
-
-                        <Button
-                            variant="contained"
-                            size="small"
-                            onClick={handleOpenCreateTag}
-                            disabled={tagsLoading && !tags}
-                            style={{ backgroundColor: "orange" }}
-                        >
-                            + Add Tag
-                        </Button>
-                    </Stack>
-                </Grid>
-            </Grid>
+            <BoardsActions />
 
             <Stack spacing={2} sx={{ mb: 2 }}>
                 {loading && <CircularProgress size={24} />}
