@@ -286,11 +286,7 @@ const Home = () => {
             {/* <HomeHeader /> */}
 
             <Grid container spacing={2} alignItems="center" justifyContent="space-between" sx={{ mb: 2 }}>
-                <Grid item>
-                    <Typography variant="h4" fontWeight={700}>
-                        Boards
-                    </Typography>
-                </Grid>
+
 
                 <Grid item>
                     <Stack direction="row" spacing={1}>
